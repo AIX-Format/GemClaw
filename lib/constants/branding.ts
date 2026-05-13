@@ -1,13 +1,13 @@
 export const BRAND = {
   product: {
-    name: 'Gemclaw',
-    platformName: 'Gemclaw AIOS',
+    name: 'GemClaw',
+    platformName: 'GemClaw AIOS',
     tagline: 'Sovereign Intelligence Orchestration System',
     systemVersion: 'OS_Sovereign.v3.0',
   },
   subProducts: {
-    forge: 'Gemclaw Forge',
-    galaxy: 'Gemclaw Galaxy',
+    forge: 'GemClaw Forge',
+    galaxy: 'GemClaw Galaxy',
     hub: 'Neural Hub',
     workspace: 'Neural Workspace',
     clawhub: 'ClawHub',
@@ -15,7 +15,7 @@ export const BRAND = {
   naming: {
     aether: {
       role: 'architectural_framework',
-      note: 'Aether is the underlying neural spine. Gemclaw is the Sovereign Interface.',
+      note: 'Aether is the underlying neural spine. GemClaw is the Sovereign Interface.',
     },
   },
   labels: {
@@ -24,16 +24,16 @@ export const BRAND = {
       workspace: 'Neural Workspace',
       hub: 'Neural Hub',
       settings: 'Config Matrix',
-      forge: 'Gemclaw Forge',
-      galaxy: 'Gemclaw Galaxy',
-      about: 'About Gemclaw',
+      forge: 'GemClaw Forge',
+      galaxy: 'GemClaw Galaxy',
+      about: 'About GemClaw',
       clawhub: 'ClawHub',
     },
     nav: {
       home: 'SOVEREIGN_CORE',
-      galaxy: 'GEMIGRAM_GALAXY',
+      galaxy: 'GEMCLAW_GALAXY',
       hub: 'NEURAL_HUB',
-      forge: 'GEMIGRAM_FORGE',
+      forge: 'GEMCLAW_FORGE',
       workspace: 'WORKSPACE',
       clawhub: 'CLAW_HUB',
       settings: 'CONFIG',
@@ -51,7 +51,7 @@ export const BRAND = {
     },
     forgeMark: {
       path: '/assets/branding/logo.png', // Unified for now
-      usage: 'Gemclaw Forge mark.',
+      usage: 'GemClaw Forge mark.',
     },
     avatar: {
       default: '/avatars/default.png',
