@@ -7,9 +7,9 @@ test.describe('Mission 06: Branding & Identity', () => {
     await page.goto('/dashboard');
   });
 
-  test('should display Gemclaw AIOS branding in the title and dashboard', async ({ page }) => {
-    await expect(page).toHaveTitle(/Gemclaw/i);
-    // Gemclaw does not appear as text in the dashboard directly based on the component,
+  test('should display GemClaw AIOS branding in the title and dashboard', async ({ page }) => {
+    await expect(page).toHaveTitle(/GemClaw/i);
+    // GemClaw does not appear as text in the dashboard directly based on the component,
     // Sovereign_OS V3.0_LIQUID is used
     const branding = page.getByText(/Sovereign_OS/i);
     await expect(branding.first()).toBeVisible();
@@ -29,7 +29,7 @@ test.describe('Mission 06: Branding & Identity', () => {
 
   test('should verify branding consistency in setting/workspace', async ({ page }) => {
     await page.goto('/workspace');
-    await expect(page).toHaveTitle(/Gemclaw/i);
+    await expect(page).toHaveTitle(/GemClaw/i);
     
     // Settings check
     await page.goto('/settings');
