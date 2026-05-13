@@ -1,6 +1,14 @@
 {
   "name": "gemclaw",
   "version": "0.1.0",
+  "aix": {
+    "stackVersion": "0.369.0",
+    "stackCodename": "Echo369",
+    "spec": "AIX/1.0",
+    "layer": "L6",
+    "layerName": "satellite-voice",
+    "authority": "axiomid.app"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",

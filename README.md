@@ -1,8 +1,40 @@
+<!-- ════════════════ AIX SOVEREIGN STACK · UNIFIED BRANDING ════════════════ -->
+
+<div align="center">
+  <img src="./assets/aix-stack-header-v2.svg" alt="The AIX Sovereign Stack. Echo369. L0 Root Authority. L1 Protocol. L2 Runtime. L3 Marketplace. L4-L6 Satellites" width="100%"/>
+</div>
+
+<div align="center">
+
+[![AIX Stack](https://img.shields.io/badge/AIX%20STACK-Echo369-39FF14?style=for-the-badge&labelColor=050505)](https://github.com/Moeabdelaziz007/aix-format/blob/main/AXIOM.md)
+[![Spec](https://img.shields.io/badge/SPEC-AIX%2F1.0-39FF14?style=for-the-badge&labelColor=050505)](https://github.com/Moeabdelaziz007/aix-format/blob/main/AXIOM.md)
+[![Layer](https://img.shields.io/badge/LAYER-L6%20%C2%B7%20SATELLITE%20VOICE-39FF14?style=for-the-badge&labelColor=050505)](https://github.com/Moeabdelaziz007/GemClaw)
+[![Version](https://img.shields.io/badge/version-v0.1.0-39FF14?style=for-the-badge&labelColor=050505)](./package.json)
+[![License](https://img.shields.io/badge/LICENSE-MIT-39FF14?style=for-the-badge&labelColor=050505)](./LICENSE)
+
+</div>
+
+<div align="center">
+
+**Satellite Layer** &nbsp;.&nbsp; [**↑ L0 `axiomid-project`**](https://github.com/Moeabdelaziz007/axiomid-project) &nbsp;.&nbsp; Sovereign Core: [**L1 `aix-format`**](https://github.com/Moeabdelaziz007/aix-format) &nbsp;.&nbsp; [**L2 `iqra`**](https://github.com/Moeabdelaziz007/iqra) &nbsp;.&nbsp; [**L3 `aix-agent-skills`**](https://github.com/Moeabdelaziz007/aix-agent-skills) &nbsp;.&nbsp; **🎙️ L6 . `GemClaw` . YOU ARE HERE**
+
+</div>
+
+<div align="center">
+
+<sub>Sibling satellites: [**L4 `AlphaAxiom`**](https://github.com/Moeabdelaziz007/AlphaAxiom) &nbsp;.&nbsp; [**L5 `PiWorker-OS`**](https://github.com/Moeabdelaziz007/PiWorker-OS) &nbsp;.&nbsp; GemClaw buys voice/persona skills from L3 via x402</sub>
+
+</div>
+
+<br/>
+
+<!-- ════════════════ /AIX SOVEREIGN STACK ════════════════ -->
+
 <p align="center">
-  <img src="./assets/branding/gemclaw_hero_banner.png" alt="Gemclaw AIOS Hero Banner" width="800"/>
+  <img src="./assets/branding/gemclaw_hero_banner.png" alt="GemClaw AIOS Hero Banner" width="800"/>
 </p>
 
-# 🌌 Gemclaw AIOS — Sovereign Intelligence Orchestration System
+# 🌌 GemClaw AIOS — Sovereign Intelligence Orchestration System
 > **Built entirely on the Google & Gemini Ecosystem** | **تم البناء بالكامل على منظومة جوجل وجيمناي**
 > Create, deploy, and interact with sovereign AI agents using nothing but your voice. | أنشئ وانشر وتفاعل مع الوكلاء الأذكياء باستخدام صوتك فقط.
 
@@ -12,9 +44,9 @@
 
 ## 🎯 Vision | الرؤية
 
-**Eng:** Gemigram is an AI-first, voice-only agent creation platform inspired by Telegram bots and BotFather, but powered entirely by Google's Gemini ecosystem. Users create AI agents through natural voice conversation with "Aether Forge", our AI architect. **Zero manual API keys are required:** user authentication automatically gates and securely provisions system-level Gemini Live sessions.
+**Eng:** GemClaw is an AI-first, voice-only agent creation platform inspired by Telegram bots and BotFather, but powered entirely by Google's Gemini ecosystem. Users create AI agents through natural voice conversation with "Aether Forge", our AI architect. **Zero manual API keys are required:** user authentication automatically gates and securely provisions system-level Gemini Live sessions.
 
-**Ar:** جيميجزام (Gemigram) هي منصة مدعومة بالذكاء الاصطناعي لإنشاء الوكلاء الأذكياء عبر الصوت فقط. مبنية بالكامل على منظومة جوجل جيمناي. يقوم المستخدمون بإنشاء وكلاء ذكاء اصطناعي من خلال محادثة صوتية طبيعية مع "Aether Forge". **لا يلزم إدخال أي مفاتيح API يدوياً:** بمجرد تسجيل الدخول الآمن، يتم تهيئة مفاتيح النظام والجلسات تلقائياً عبر الخادم الخلفي (Backend).
+**Ar:** جيميجزام (GemClaw) هي منصة مدعومة بالذكاء الاصطناعي لإنشاء الوكلاء الأذكياء عبر الصوت فقط. مبنية بالكامل على منظومة جوجل جيمناي. يقوم المستخدمون بإنشاء وكلاء ذكاء اصطناعي من خلال محادثة صوتية طبيعية مع "Aether Forge". **لا يلزم إدخال أي مفاتيح API يدوياً:** بمجرد تسجيل الدخول الآمن، يتم تهيئة مفاتيح النظام والجلسات تلقائياً عبر الخادم الخلفي (Backend).
 
 ## 🏗️ Google Ecosystem Integration | التكامل مع منظومة جوجل
 
@@ -50,8 +82,8 @@
 
 ### 1. Clone & Install | النسخ والتثبيت
 ```bash
-git clone https://github.com/Moeabdelaziz007/Gemigram.git
-cd Gemigram
+git clone https://github.com/Moeabdelaziz007/GemClaw.git
+cd GemClaw
 npm install
 ```
 
@@ -111,7 +143,7 @@ MIT License — See [LICENSE](./LICENSE)
 <div align="center">
   <strong>Built with ❤️ on the Google & Gemini Ecosystem</strong><br/>
   <strong>تم البناء بحب على منظومة أدوات جوجل وجيمناي</strong><br/>
-  <sub>Gemigram AIOS — Where Voice Meets Intelligence | حيث يلتقي الصوت بالذكاء</sub>
+  <sub>GemClaw AIOS — Where Voice Meets Intelligence | حيث يلتقي الصوت بالذكاء</sub>
 </div>) | إدارة الحالة العصبية
 
 | Slice (الشريحة) | Purpose | الغرض |
@@ -148,5 +180,27 @@ MIT License — See [LICENSE](./LICENSE)
 <div align="center">
   <strong>Built with ❤️ on the Google & Gemini Ecosystem</strong><br/>
   <strong>تم البناء بحب على منظومة أدوات جوجل وجيمناي</strong><br/>
-  <sub>Gemigram — Where Voice Meets Intelligence | حيث يلتقي الصوت بالذكاء</sub>
+  <sub>GemClaw — Where Voice Meets Intelligence | حيث يلتقي الصوت بالذكاء</sub>
 </div>
+
+<!-- ════════════════ AIX SOVEREIGN STACK . FOOTER ════════════════ -->
+
+---
+
+<div align="center">
+
+[**↑ L0 `axiomid-project`**](https://github.com/Moeabdelaziz007/axiomid-project) &nbsp;.&nbsp; [**L1 `aix-format`**](https://github.com/Moeabdelaziz007/aix-format) &nbsp;.&nbsp; [**L2 `iqra`**](https://github.com/Moeabdelaziz007/iqra) &nbsp;.&nbsp; [**L3 `aix-agent-skills`**](https://github.com/Moeabdelaziz007/aix-agent-skills) &nbsp;.&nbsp; **🎙️ L6 . `GemClaw` . YOU ARE HERE**
+
+</div>
+
+<div align="center">
+
+<sub>Sibling satellites: [**L4 `AlphaAxiom`**](https://github.com/Moeabdelaziz007/AlphaAxiom) &nbsp;.&nbsp; [**L5 `PiWorker-OS`**](https://github.com/Moeabdelaziz007/PiWorker-OS)</sub>
+
+</div>
+
+<div align="center">
+  <img src="./assets/aix-footer-quote-v2.svg" alt="AIX Stack. Echo369. King is not Born, he is Made." width="100%"/>
+</div>
+
+<!-- ════════════════ /AIX SOVEREIGN STACK . FOOTER ════════════════ -->
