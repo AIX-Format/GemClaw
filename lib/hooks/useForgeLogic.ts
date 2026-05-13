@@ -3,7 +3,6 @@
 import { useEffect, useState, useCallback } from 'react';
 import { useLiveAPI } from '@/hooks/useLiveAPI';
 import { useGemclawStore } from '@/lib/store/useGemclawStore';
-import { enhanceSystemPromptWithPersona } from '@/lib/persona/persona-templates';
 import { Agent } from '@/lib/store/slices/createAgentSlice';
 import { ToolResult } from '@/lib/types/live-api';
 
@@ -58,13 +57,38 @@ export function useForgeLogic() {
   const [transcript, setTranscript] = useState('');
   
   // Materialization logic
+  //
+  // finalizeMaterialization can be invoked multiple times (edit, finalize,
+  // re-edit, finalize again). Each call writes the composed prompt back into
+  // formData.systemPrompt via setLocalFormData, so the next call sees the
+  // previously-stamped prompt as its base. To keep the operation idempotent
+  // we strip the auto-stamped sections before re-stamping, BUT only when
+  // we are about to re-add them. Stripping unconditionally would clobber
+  // CORE DIRECTIVES content that the user/blueprint authored directly into
+  // systemPrompt whenever formData.rules is empty.
+  //
+  // The trade-off: if formData.rules was set on a previous finalize call
+  // and the user then clears it and finalizes again, the previously-stamped
+  // trailer survives. That is acceptable because the alternative (always
+  // strip) silently deletes author content, which is a worse failure mode.
+  // The persona header gets the same conditional treatment for symmetry.
   const finalizeMaterialization = useCallback(() => {
-    let finalSystemPrompt = formData.systemPrompt || `You are ${formData.name}, an AI assistant.`;
+    const rawSystemPrompt = formData.systemPrompt || `You are ${formData.name}, an AI assistant.`;
+
+    let finalSystemPrompt = rawSystemPrompt;
+
     if (formData.persona) {
-      finalSystemPrompt = enhanceSystemPromptWithPersona(finalSystemPrompt, formData.persona);
+      // About to prepend a fresh persona header; strip any stacked existing
+      // headers first so we don't accumulate duplicates across re-runs.
+      finalSystemPrompt = finalSystemPrompt.replace(/^(?:\[PERSONA:[^\n]*\]\n\n)+/, '');
+      finalSystemPrompt = `[PERSONA: ${formData.persona}]\n\n${finalSystemPrompt}`;
     }
-    
+
     if (formData.rules) {
+      // About to append a fresh directives trailer; strip an existing one
+      // first. Skipping this branch preserves any user-authored CORE
+      // DIRECTIVES section when rules is intentionally empty.
+      finalSystemPrompt = finalSystemPrompt.replace(/\n\nCORE DIRECTIVES:\n[\s\S]*$/, '');
       finalSystemPrompt += `\n\nCORE DIRECTIVES:\n${formData.rules}`;
     }
 
