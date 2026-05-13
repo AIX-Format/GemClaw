@@ -165,8 +165,9 @@ export const test = base.extend({
  * five-second `locator not visible` timeout.
  */
 export async function gotoAuthed(page: Page, route: string) {
-  const targetPath = new URL(route, 'http://localhost:3000').pathname;
-  const response = await page.goto(targetPath, { waitUntil: 'domcontentloaded' });
+  const targetUrl = new URL(route, 'http://localhost:3000');
+  const targetLocation = `${targetUrl.pathname}${targetUrl.search}${targetUrl.hash}`;
+  const response = await page.goto(targetLocation, { waitUntil: 'domcontentloaded' });
 
   if (response && response.status() >= 400) {
     throw new Error(`gotoAuthed(${route}): server returned HTTP ${response.status()}`);
@@ -184,10 +185,15 @@ export async function gotoAuthed(page: Page, route: string) {
   // initial `loading` flag before we sample the URL.
   await page.waitForTimeout(300);
 
-  const landedPath = new URL(page.url()).pathname;
-  if (landedPath !== targetPath) {
+  const landed = new URL(page.url());
+  if (
+    landed.pathname !== targetUrl.pathname ||
+    landed.search !== targetUrl.search ||
+    landed.hash !== targetUrl.hash
+  ) {
+    const landedLocation = `${landed.pathname}${landed.search}${landed.hash}`;
     throw new Error(
-      `gotoAuthed(${route}): page redirected to ${landedPath}. ` +
+      `gotoAuthed(${route}): page redirected to ${landedLocation}. ` +
         `The AuthProvider did not consume __e2eMockUser__ before the route guard fired. ` +
         `Inspect components/Providers.tsx for the e2e short-circuit, or extend the mock with the field the guard expects.`,
     );
