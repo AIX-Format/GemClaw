@@ -3,7 +3,6 @@
 import { useEffect, useState, useCallback } from 'react';
 import { useLiveAPI } from '@/hooks/useLiveAPI';
 import { useGemclawStore } from '@/lib/store/useGemclawStore';
-import { enhanceSystemPromptWithPersona } from '@/lib/persona/persona-templates';
 import { Agent } from '@/lib/store/slices/createAgentSlice';
 import { ToolResult } from '@/lib/types/live-api';
 
@@ -61,9 +60,9 @@ export function useForgeLogic() {
   const finalizeMaterialization = useCallback(() => {
     let finalSystemPrompt = formData.systemPrompt || `You are ${formData.name}, an AI assistant.`;
     if (formData.persona) {
-      finalSystemPrompt = enhanceSystemPromptWithPersona(finalSystemPrompt, formData.persona);
+      finalSystemPrompt = `[PERSONA: ${formData.persona}]\n\n${finalSystemPrompt}`;
     }
-    
+
     if (formData.rules) {
       finalSystemPrompt += `\n\nCORE DIRECTIVES:\n${formData.rules}`;
     }
