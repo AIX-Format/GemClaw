@@ -22,7 +22,7 @@ jobs:
       - name: Build Next.js (Static Export)
         run: npm run build
       - name: Archive Build Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: next-out
           path: out/
